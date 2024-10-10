@@ -1,7 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
-import { PrivateRoute } from './Routes/PrivateRoute';
+import { Suspense, useEffect, lazy } from "react"; // missing useContext\
+//add loader
+import { getToken } from "redux/authSelectors";
+import { useGetUserQuery } from "redux/auth";
+import { setCurrentUser } from "redux/authSlice";
 
-//add imports 
+ //add imports 
+
+const Diary = lazy (() => import('../pages/DiaryPage'));
 
 export const App = () => {
     const dailyRate = useSelector(state => state.auth.userInfo.dailyRate);
