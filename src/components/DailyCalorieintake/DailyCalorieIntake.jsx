@@ -9,7 +9,7 @@ import {
   ModalWrapper,
   ButtonWrapper,
   ButtonForm,
-} from './DailyCalorieintake.styled';
+} from './DailyCalorieIntake.styled';
 
 const DailyCalorieIntake = ({ backResponse, userParams }) => {
   const navigate = useNavigate();
